@@ -16,10 +16,6 @@ namespace TestProject1
             services
                 .AddSingleton<IEmployee, Employee>(x => new Employee(configData: GetConfigData))
                 .AddSingleton<ILocation, Location>();
-
-
-            // Set the service provider in the service locator
-            ServiceLocator.SetProvider(services.BuildServiceProvider());
         }
 
         public void ConfigureHost(IHostBuilder hostBuilder)
